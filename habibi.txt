@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multiple Messages</title>
+  <style>
+    body {
+      background: #0f172a;
+      color: white;
+      font-family: Arial;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      width: 320px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #38bdf8;
+    }
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #facc15;
+      min-height: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2>Choose Your Option</h2>
+
+    <button onclick="showMessage(1)">Button 1</button>
+    <button onclick="showMessage(2)">Button 2</button>
+    <button onclick="showMessage(3)">Button 3</button>
+
+    <div id="message"></div>
+  </div>
+
+  <script>
+    function showMessage(btn) {
+      let message = "";
+
+      if (btn === 1) {
+        message = "🎉 Aap jeet gaye! Coupon Code: WIN50";
+      } 
+      else if (btn === 2) {
+        message = "🔥 Better luck next time!";
+      } 
+      else if (btn === 3) {
+        message = "🎁 Surprise Offer unlocked!";
+      }
+
+      document.getElementById("message").innerText = message;
+    }
+  </script>
+
+</body>
+</html>
